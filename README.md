@@ -36,6 +36,20 @@ These are repetitive decisions and rare but costly errors. They are a good fit f
 | 7 | Month-end report | Code computes 28 facts. Gemini writes the narrative (summary, risks, who-does-what-by-when). Code then checks that **every number in the AI text exists in the facts**. Output is a Google Doc marked "draft" | Gemini, Docs |
 | 8 | Dashboard | One page for the owner: KPIs, issues by severity, receivables aging, forecast chart, and a quality block with live test results | Sheets charts, Apps Script |
 
+## Screenshots
+
+**Invoices after AI extraction, validation and bank reconciliation:** each row carries AI flags, check flags (changed IBAN, duplicate, prompt injection, unknown supplier…) and a payment status from the bank match.
+
+![Invoices sheet with flags and payment statuses](docs/screenshots/invoices-flags-statuses.png)
+
+**Payment run:** only approved invoices with a verified IBAN, paid to the master-data account. Everything else is listed with the reason it was excluded.
+
+![Payment run with excluded invoices and reasons](docs/screenshots/payment-run.png)
+
+**Month-end report:** Gemini writes the narrative from code-computed facts; code then confirms every number in the text exists in the facts.
+
+![Month-end report narrative with number check](docs/screenshots/month-end-ai-narrative.png)
+
 ## Design principles
 
 1. **AI extracts and explains; code calculates and compares.** FX conversion, totals, duplicates, matching and forecasts are deterministic code.
