@@ -6,6 +6,10 @@ An end-to-end finance back-office built on **Google Sheets + Apps Script + Gemin
 
 **Georgian summary (ქართულად):** მცირე ბიზნესის ფინანსური ოპერაციების ასისტენტი. ინვოისი ფოსტით შემოდის, AI მას ამოიკითხავს, კოდი შეამოწმებს, ბანკის ამონაწერს შეადარებს და დებიტორებს აკონტროლებს. ბოლოს სისტემა ამზადებს Payment run-ს (გადახდა მხოლოდ ადამიანის დადასტურებით), 13-კვირიან პროგნოზს, თვის ანგარიშს და დაფას. ყველა მონაცემი სინთეტიკურია.
 
+![Owner dashboard: KPIs, issues by severity, receivables aging](docs/screenshots/dashboard-top.png)
+
+![13-week cash forecast and live quality checks](docs/screenshots/dashboard-forecast-quality.png)
+
 ---
 
 ## The problem
